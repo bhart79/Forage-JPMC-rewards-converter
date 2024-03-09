@@ -1,6 +1,7 @@
 public class RewardValue {
     double cash;
     double miles;
+    public static final double convRate = .0035;
     public RewardValue(double cashValue) {
         cash = cashValue;
     }
@@ -9,11 +10,10 @@ public class RewardValue {
 
     }
     public double getCashValue() {
-
-        return cash;
+        return miles / convRate;
     }
     public double getMilesValue() {
-        return cash * .0035;
+        return cash * convRate;
 
     }
 }
